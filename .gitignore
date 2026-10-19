@@ -1,0 +1,11 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.hypothesis/
+screenshots/
+reports/
+*.html
+!demo_site/*.html
+.venv/
+venv/
+.env

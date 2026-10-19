@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Demo Shop - Home</title>
+  <style>
+    body { font-family: Arial, sans-serif; max-width: 720px; margin: 40px auto; }
+    nav a { margin-right: 16px; }
+    .products { display: flex; gap: 16px; margin-top: 24px; }
+    .card { border: 1px solid #ccc; padding: 16px; border-radius: 8px; width: 200px; }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="index.html">Products</a>
+    <a href="index.html">Cart</a>
+    <a href="index.html">Contact</a>
+    <a id="logout-link" href="login.html">Logout</a>
+  </nav>
+
+  <h1 id="welcome-heading">Welcome to Demo Shop, admin!</h1>
+  <p>You are logged in. This is a tiny local demo store used by the automated tests.</p>
+
+  <div class="products">
+    <div class="card"><h3>Demo Product A</h3><p>$19.99</p></div>
+    <div class="card"><h3>Demo Product B</h3><p>$29.99</p></div>
+    <div class="card"><h3>Demo Product C</h3><p>$39.99</p></div>
+  </div>
+</body>
+</html>

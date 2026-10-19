@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Demo Shop - Login</title>
+  <style>
+    body { font-family: Arial, sans-serif; max-width: 420px; margin: 60px auto; }
+    label { display: block; margin-top: 12px; }
+    input { width: 100%; padding: 8px; margin-top: 4px; box-sizing: border-box; }
+    button { margin-top: 16px; padding: 10px 24px; cursor: pointer; }
+    #error-msg { display: none; color: #b00020; margin-top: 12px; font-weight: bold; }
+    .hint { color: #555; font-size: 0.9em; margin-top: 16px; }
+  </style>
+</head>
+<body>
+  <h1>Demo Shop Login</h1>
+  <form id="login-form">
+    <label for="username">Username</label>
+    <input id="username" name="username" type="text" autocomplete="off">
+
+    <label for="password">Password</label>
+    <input id="password" name="password" type="password">
+
+    <button id="login-btn" type="submit">Log in</button>
+  </form>
+  <div id="error-msg" role="alert"></div>
+  <p class="hint">Demo credentials for this local test app: <b>admin</b> / <b>password123</b></p>
+
+  <script>
+    document.getElementById('login-form').addEventListener('submit', function (e) {
+      e.preventDefault();
+      var user = document.getElementById('username').value.trim();
+      var pass = document.getElementById('password').value;
+      var err = document.getElementById('error-msg');
+      if (user === 'admin' && pass === 'password123') {
+        window.location.href = 'index.html';
+      } else if (!user || !pass) {
+        err.textContent = 'Username and password are required.';
+        err.style.display = 'block';
+      } else {
+        err.textContent = 'Invalid username or password.';
+        err.style.display = 'block';
+      }
+    });
+  </script>
+</body>
+</html>
